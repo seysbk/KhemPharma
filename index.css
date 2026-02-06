@@ -1,0 +1,41 @@
+.user-profile>i {
+    color: var(--text-secondary);
+    margin-right: 16px;
+    font-size: 1.1rem;
+}
+
+.card>h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+.card>p {
+    opacity: 0.9;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+.recent-activity{
+    display: grid;
+    grid-template-columns: 2fr 1fr; gap: 24px;
+}
+
+@media screen and (width <1028px) {
+    .recent-activity{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .modern-table th{
+        padding: .5rem .5rem;
+        letter-spacing: 0;
+    }
+    .modern-table td{
+        padding: .5rem .5rem;
+        font-size: .7rem;
+        word-wrap: break-word;
+    }
+    .badge{
+        padding: 2px 5px;
+        font-size: .5rem;
+    }
+}

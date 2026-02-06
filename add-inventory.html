@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khem Pharmaceutical - Add Inventory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="add-inventory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Logo">
+            <span>KHEM PHARMA</span>
+        </div>
+        <nav>
+            <a class='nav-link' href='index.html'>
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+            <a class='nav-link' href='inventory.html'>
+                <i class="fa-solid fa-boxes-stacked"></i> Master Inventory
+            </a>
+            <a class='nav-link' href='suppliers.html'>
+                <i class="fa-solid fa-truck-fast"></i> Supply Chain
+            </a>
+            <a class='nav-link' href='report.html'>
+                <i class="fa-solid fa-file-contract"></i> Compliance
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-wrapper">
+        <header class="top-bar">
+            <h1>Add Inventory</h1>
+            <div class="user-profile">
+                <i class="fa-solid fa-bell"></i>
+                <details>
+                    <summary>
+                        <div class="avatar"></div>
+                    </summary>
+                    <div>
+                        <span><b>Dr. (Mrs.) Alimati-Saadia Yussif</b></span>
+                        <span><b>Inventory Manager</b></span>
+                        <span><b>ID: <br></b><i>PG001</i></span>
+                        <span><b>Branch: <br> </b><i>Cape Coast,Ghana</i></span>
+                    </div>
+                </details>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section style="min-height: 90vh;">
+                <form method="post">
+                    <div class="form">
+                        <label for="sku">Stock Keeping Unit</label>
+                        <input type="text" id="sku">
+                    </div>
+                    
+                    <div class="form">
+                        <label for="name">Pharmaceutical Name</label>
+                        <input type="text" id="name">
+                    </div>
+                    
+                    <div class="form">
+                        <label for="category">Category</label>
+                        <select id="category">
+                            <option value="" selected></option>
+                            <option value="Analgesic" id="category">Analgesic</option>
+                            <option value="Antibiotic">Antibiotic</option>
+                            <option value="Antiviral">Antiviral</option>
+                            <option value="Antifungal">Antifungal</option>
+                            <option value="Cardiovascular">Cardiovascular</option>
+                            <option value="Diabetic">Diabetic</option>
+                            <option value="Dermatological">Dermatological</option>
+                            <option value="Gastrointestinal">Gastrointestinal</option>
+                            <option value="Hormonal">Hormonal</option>
+                            <option value="Respiratory">Respiratory</option>
+                            <option value="Neurology">Neurology</option>
+                            <option value="Supplement">Supplement</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form">
+                        <label for="dossage">Dossage</label>
+                        <input type="text" id="dossage">
+                    </div>
+
+                    <div class="form">
+                        <label for="batch">Batch</label>
+                        <input type="text" id="batch">
+                    </div>
+                    
+                    <div class="sub">
+                        <div class="form">
+                            <label for="expiry">Expiry</label>
+                            <input type="date" id="expiry">
+                        </div>
+                    
+                        <div class="form">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity">
+                        </div>
+                        <div class="form">
+                            <label for="price">Price</label>
+                            <input type="number" id="Price">
+                        </div>
+                    
+                        <div class="form">
+                                <label for="image" style="display: flex; flex-direction: column; gap: .5rem; justify-content: center; margin-bottom: 0;">
+                                    Upload Image
+                                    <input type="file" id="image" style="display: none;">
+                                    <div style="border-radius: 6px; width: 100%; border: 1px solid var(--border); background-color: white; padding: 9px 13px;"><img src="./images/cloud.png" alt="Upload" width="14" height="14"></div>
+                                </label>
+                            </div>
+                    </div>
+                    <div class="form" style="margin-top: 1rem;">
+                        <label for="quantity"><input type="checkbox" id="quantity">I have confirmed the data entered is accurate</label>
+                    </div>
+                    
+                </form>
+            </section>
+           <footer>
+                <div class="socials" style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
+                    <a href="https://instagram.com">
+                        <img src="./images/instagram.png" alt="instagram" width="25px">
+                    </a>
+                    <a href="https://linkedin.com">
+                        <img src="./images/linkedin.png" alt="linkedin" width="25px">
+                    </a>
+                    <a href="mailto:stu@ucc.edu.gh">
+                        <img src="./images/mail.png" alt="mail" width="25px">
+                    </a> 
+                </div>
+                               
+                <p style="margin: 0;">&copy; 2026 KHEM PHARMA</p>
+            </footer> 
+        </div>
+    </main>
+</body>
+
+</html>

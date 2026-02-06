@@ -1,0 +1,97 @@
+dialog{
+    border: none;
+    border-radius: 1rem;
+    padding: 0;
+    width: min(90vw, 500px);
+    z-index: 1;
+    background-color: var(--primary-light);
+    margin-top: 1rem;  
+}
+
+dialog::backdrop{
+    background: rgba( 0, 0, 0, .5);
+}
+
+form{
+    padding: 1rem;
+    max-height: 70vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    clear: both;
+}
+
+fieldset{
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* gap: .5rem; */
+}
+
+input[type="text"],input[type="date"],input[type="number"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    resize: none;
+}
+
+.close {
+    padding: .2rem;
+    border: 1px solid var(--border);
+    background-color: var(--danger-bg);
+    border-radius: 2rem;
+    margin: .5rem .5rem .2rem .5rem;
+    float: right;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    margin-top: .5rem;
+}
+
+button[type="submit"]{
+    margin-top: 1rem;
+    background-color: var(--primary);
+    padding: .5rem;
+    border: 1px solid var(--border);
+    border-radius: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primary-light);
+}
+
+button[type="submit"]:hover{
+        background-color: var(--primary-dark);
+        transition: 0.2s ease;
+    }
+
+
+
+
+@media screen and (width <1028px) {
+    table,tbody,th,td,tr {
+        display: block;
+    }   
+    .layout-grid-table{
+        width: 300%;
+    }
+    .content-area{
+        overflow-x: hidden;
+    }
+}

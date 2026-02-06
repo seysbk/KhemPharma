@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khem Pharmaceutical -  Master Inventory</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inventory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Logo">
+            <span>KHEM PHARMA</span>
+        </div>
+        <nav>
+            <a class='nav-link' href='index.html'>
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+            <a class='nav-link active' href='inventory.html'>
+                <i class="fa-solid fa-boxes-stacked"></i> Master Inventory
+            </a>
+            <a class='nav-link' href='suppliers.html'>
+                <i class="fa-solid fa-truck-fast"></i> Supply Chain
+            </a>
+            <a class='nav-link' href='report.html'>
+                <i class="fa-solid fa-file-contract"></i> Compliance
+            </a>
+        </nav>
+        <div class="storage" style="margin-top: auto; padding: 20px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+            <p style="font-size: 0.75rem; color: #94A3B8; margin-bottom: 8px;">Storage Capacity</p>
+            <div style="width: 100%; height: 6px; background: #334155; border-radius: 3px;">
+                <div style="width: 72%; height: 100%; background: var(--success-text); border-radius: 3px;"></div>
+            </div>
+            <p style="font-size: 0.7rem; color: #94A3B8; margin-top: 4px; text-align: right;">72% Used</p>
+        </div>
+    </aside>
+
+    <main class="main-wrapper">
+        <header class="top-bar">
+            <h1>Master Inventory</h1>
+            <div class="user-profile">
+                <details>
+                    <summary>
+                        <div class="avatar"></div>
+                    </summary>
+                    <div>
+                        <span><b>Dr. (Mrs.) Alimati-Saadia Yussif</b></span>
+                        <span><b>Inventory Manager</b></span>
+                        <span><b>ID: <br></b><i>PG001</i></span>
+                        <span><b>Branch: <br> </b><i>Cape Coast,Ghana</i></span>
+                    </div>
+                </details>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section>
+                <!-- Summary Metric Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-label">Total Stock Value</span>
+                        <div class="stat-value">&#x20B5;248,320.50</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Categories</span>
+                        <div class="stat-value">12</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Critical Shortages</span>
+                        <div class="stat-value" style="color: var(--danger-text);">3 Items</div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Expiring Soon (&lt; 30 Days)</span>
+                                <div class="stat-value" style="color: var(--warning-text);">18 Batches</div>
+                    </div>
+                </div>
+
+                <!-- Filters Toolbar -->
+                <div class="card">
+                    <div class="input-control">
+                        <i class="fa-solid fa-search" style="color: var(--text-secondary); margin-right: 8px;"></i>
+                        <input type="text" placeholder="Search by SKU, Name, or Batch...">
+                    </div>
+                    <select class="input-control" style="width: 150px;">
+                        <option>All Categories</option>
+                        <option>Analgesics</option>
+                        <option>Antibiotics</option>
+                        <option>Cardiovascular</option>
+                    </select>
+                    <select class="input-control" style="width: 150px;">
+                        <option>Status: All</option>
+                        <option>In Stock</option>
+                        <option>Low Stock</option>
+                    </select>
+                    <div style="flex: 1;"></div>
+                    <a href="add-inventory.html"><button class="btn btn-primary"><i class="fa-solid fa-plus" style="margin-right: 8px;"></i> Add New
+                        Item</button></a>
+                </div>
+
+                <div class="card" style="padding: 0; overflow: hidden; flex-direction: column;">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px;">View</th>
+                                <th style="width: 100px;">SKU</th>
+                                <th style="width: 250px;">Pharmaceutical Name</th>
+                                <th style="width: 120px;">Category</th>
+                                <th style="width: 100px;">Dosage</th>
+                                <th style="width: 100px;">Batch #</th>
+                                <th style="width: 100px;">Expiry</th>
+                                <th style="width: 100px;">Qty</th>
+                                <th style="width: 120px;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Item 1 -->
+                            <tr>
+                                <td>
+                                    <a href="images/product.png" target="_blank">
+                                        <img src="images/product.png"
+                                            style="width: 32px; height: 32px; object-fit: contain;">
+                                    </a>
+                                </td>
+                                <td style="font-family: monospace;">KP-ANA-001</td>
+                                <td style="font-weight: 500;">Ibuprofen (Advil)</td>
+                                <td>Analgesic</td>
+                                <td>200mg</td>
+                                <td>#B9921</td>
+                                <td>Dec 2025</td>
+                                <td>5,000</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                            <!-- Item 2 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-ANA-002</td>
+                                <td style="font-weight: 500;">Paracetamol (Tylenol)</td>
+                                <td>Analgesic</td>
+                                <td>500mg</td>
+                                <td>#B9922</td>
+                                <td>Jan 2026</td>
+                                <td>3,200</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                            <!-- Item 3 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-ANT-101</td>
+                                <td style="font-weight: 500;">Amoxicillin Trihydrate</td>
+                                <td>Antibiotic</td>
+                                <td>250mg</td>
+                                <td>#A4410</td>
+                                <td><span style="color: #DC2626; font-weight: bold;">Aug 2024</span></td>
+                                <td>45</td>
+                                <td><span class="badge badge-red">Critical</span></td>
+                            </tr>
+                            <!-- Item 4 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-ANT-102</td>
+                                <td style="font-weight: 500;">Azithromycin</td>
+                                <td>Antibiotic</td>
+                                <td>500mg</td>
+                                <td>#A4415</td>
+                                <td>Nov 2025</td>
+                                <td>120</td>
+                                <td><span class="badge badge-green">Low Stock</span></td>
+                            </tr>
+                            <!-- Item 5 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-CAR-201</td>
+                                <td style="font-weight: 500;">Atorvastatin (Lipitor)</td>
+                                <td>Cardiovascular</td>
+                                <td>10mg</td>
+                                <td>#C3001</td>
+                                <td>Mar 2026</td>
+                                <td>850</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                            <!-- Item 6 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-CAR-205</td>
+                                <td style="font-weight: 500;">Lisinopril</td>
+                                <td>Cardiovascular</td>
+                                <td>20mg</td>
+                                <td>#C3009</td>
+                                <td>Feb 2025</td>
+                                <td>1,200</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                            <!-- Item 7 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-DIA-301</td>
+                                <td style="font-weight: 500;">Metformin HCL</td>
+                                <td>Diabetic</td>
+                                <td>500mg</td>
+                                <td>#D5521</td>
+                                <td>Sep 2025</td>
+                                <td>2,500</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                            <!-- Item 8 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-DIA-302</td>
+                                <td style="font-weight: 500;">Insulin Glargine</td>
+                                <td>Diabetic</td>
+                                <td>100 units/mL</td>
+                                <td>#D5588</td>
+                                <td><span style="color: #F59E0B;">Oct 2024</span></td>
+                                <td>15</td>
+                                <td><span class="badge badge-red">Out of Stock</span></td>
+                            </tr>
+                            <!-- Item 9 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-RES-401</td>
+                                <td style="font-weight: 500;">Albuterol Sulfate</td>
+                                <td>Respiratory</td>
+                                <td>90mcg</td>
+                                <td>#R1020</td>
+                                <td>Dec 2026</td>
+                                <td>450</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                            <!-- Item 10 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-VIT-501</td>
+                                <td style="font-weight: 500;">Vitamin D3</td>
+                                <td>Supplement</td>
+                                <td>5000 IU</td>
+                                <td>#V8821</td>
+                                <td>Jul 2027</td>
+                                <td>5,000</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                            <!-- Item 11 -->
+                            <tr>
+                                <td><img src="images/product.png" style="width: 32px; height: 32px; object-fit: contain;">
+                                </td>
+                                <td style="font-family: monospace;">KP-NEU-602</td>
+                                <td style="font-weight: 500;">Gabapentin</td>
+                                <td>Neurology</td>
+                                <td>300mg</td>
+                                <td>#N7721</td>
+                                <td>Jan 2025</td>
+                                <td>330</td>
+                                <td><span class="badge badge-blue">In Stock</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div
+                        style="padding: 16px; border-top: 1px solid var(--border); background: #F8FAFC; text-align: right; color: var(--text-secondary); font-size: 0.85rem; width: 100%;">
+                        Showing 1-11 of 1,420 Inventory Records
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class="socials" style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
+                    <a href="https://instagram.com">
+                        <img src="./images/instagram.png" alt="instagram" width="25px">
+                    </a>
+                    <a href="https://linkedin.com">
+                        <img src="./images/linkedin.png" alt="linkedin" width="25px">
+                    </a>
+                    <a href="mailto:stu@ucc.edu.gh">
+                        <img src="./images/mail.png" alt="mail" width="25px">
+                    </a> 
+                </div>         
+                <p style="margin: 0;">&copy; 2026 KHEM PHARMA</p>
+            </footer>
+        </div>
+    </main>
+
+</body>
+</html>

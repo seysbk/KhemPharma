@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khem Pharmaceutical - Supplier</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="suppliers.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Logo">
+            <span>KHEM PHARMA</span>
+        </div>
+        <nav>
+            <a class='nav-link' href='index.html'>
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+            <a class='nav-link' href='inventory.html'>
+                <i class="fa-solid fa-boxes-stacked"></i> Master Inventory
+            </a>
+            <a class='nav-link active' href='suppliers.html'>
+                <i class="fa-solid fa-truck-fast"></i> Supply Chain
+            </a>
+            <a class='nav-link' href='report.html'>
+                <i class="fa-solid fa-file-contract"></i> Compliance
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-wrapper">
+        <div class="top-bar">
+            <h1>Supply Chain Partners</h1>
+            <div class="user-profile">
+                <details>
+                    <summary>
+                        <div class="avatar"></div>
+                    </summary>
+                    <div>
+                        <span><b>Dr. (Mrs.) Alimati-Saadia Yussif</b></span>
+                        <span><b>Inventory Manager</b></span>
+                        <span><b>ID: <br></b><i>PG001</i></span>
+                        <span><b>Branch: <br> </b><i>Cape Coast,Ghana</i></span>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <dialog id="vendor">
+                    <button onclick="vendor.close()" class="close">close</button>
+                    <form method="post">
+                        <fieldset>
+                            <legend>New Vendor</legend>
+                            <label for="supName">Supplier Name</label>
+                            <input type="text" id="supName">
+                            <label for="location">Location</label>
+                            <input type="text" id="location">
+                            <label for="country">Country</label>
+                            <input type="text" id="country">
+                            <label for="description">Description</label>
+                            <textarea name="description" id="description"></textarea>
+
+                            <label for="category">Supplier Category</label>
+
+                            <label for="Tier1"><input type="checkbox" id="Tier1" name="category" value="Tier1">Tier 1 Partner</label>
+
+                            <label for="organic"><input type="checkbox" id="organic" name="category" value="organic">Organic</label>
+
+                            <label for="Specialty"><input type="checkbox" id="Specialty" name="category" value="Specialty">Specialty</label>
+
+                            <label for="ISO"><input type="checkbox" id="ISO" name="category" value="ISO 9001">ISO 9001</label>
+
+                            <label for="Emergency"><input type="checkbox" id="Emergency" name="category" value="Emergency Only">Emergency Only</label>
+
+                            <label for="Wholesale"><input type="checkbox" id="Wholesale" name="category" value="Wholesale">Wholesale</label>   
+                            <button type="submit">Create Supplier</button>                         
+                        </fieldset>
+                        
+                    </form>
+                </dialog>
+            <section>
+
+                <div style="margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; padding: 0 16px;">
+                    <p style="color: var(--text-secondary);">Manage procurement channels and vendor relationships.</p>
+                    <button class="btn btn-primary" onclick="vendor.showModal()"><i class="fa-solid fa-plus" style="margin-right: 8px;"></i> Onboard New
+                        Vendor</button>
+                </div>
+
+                <table class="layout-grid-table">
+                    <!-- Row 1 -->
+                    <tr>
+                        <!-- Card 1 -->
+                        <td>
+                            <div class="supplier-card">
+                                <div
+                                    style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <i class="fa-solid fa-earth-americas" style="font-size: 2.5rem; color: #3B82F6;"></i>
+                                </div>
+                                <h3>Kinapharma Ltd</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;">
+                                    Accra, Ghana
+                                </p>
+                                <p style="font-size: 0.9rem; margin-bottom: 16px;">
+                                    Provider of essential generic medications and antiretrovirals. GMP Certified.
+                                </p>
+                                <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
+                                    <span class="badge badge-blue">Tier 1 Partner</span>
+                                    <span class="badge badge-green">98% On-Time</span>
+                                </div>
+                                <a href="https://www.kinapharma.org" target="_blank"><button class="btn btn-primary" style="width: 100%;">Order Portal</button></a>
+                            </div>
+                        </td>
+
+                        <!-- Card 2 -->
+                        <td>
+                            <div class="supplier-card">
+                                <div
+                                    style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <i class="fa-solid fa-flask-vial" style="font-size: 2.5rem; color: #8B5CF6;"></i>
+                                </div>
+                                <h3>Ernest Chemist Limited (ECL)</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;">Accra, Ghana</p>
+                                <p style="font-size: 0.9rem; margin-bottom: 16px;">
+                                    Provider of diabetic and analgetic medications. WHO Certified
+                                </p>
+                                <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
+                                    <span class="badge badge-blue">Specialty</span>
+                                    <span class="badge badge-green">ISO 9001</span>
+                                </div>
+                                <a href="tel:+2333022301028">
+                                    <button class="btn btn-primary"
+                                    style="width: 100%; background: white; color: #333; border: 1px solid #ddd;">Contact Rep</button>
+                                </a>
+                            </div>
+                        </td>
+
+                        <!-- Card 3 -->
+                        <td>
+                            <div class="supplier-card">
+                                <div
+                                    style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <i class="fa-solid fa-ship" style="font-size: 2.5rem; color: #06B6D4;"></i>
+                                </div>
+                                <h3>Pfizer Inc.</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;">New York, USA
+                                </p>
+                                <p style="font-size: 0.9rem; margin-bottom: 16px;">
+                                    Supplier of vaccines and oncology treatments. FDA Certified.
+                                </p>
+                                <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
+                                    <span class="badge badge-blue">Wholesale</span>
+                                    <span class="badge badge-red">Slow Shipping</span>
+                                </div>
+                                <a href="https://www.pfizer.com" target="_blank"><button class="btn btn-primary"
+                                    style="width: 100%; background: white; color: #333; border: 1px solid #ddd;">Request Shipping</button></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- Row 2 -->
+                    <tr>
+                        <!-- Card 4 -->
+                        <td>
+                            <div class="supplier-card">
+                                <div
+                                    style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <i class="fa-solid fa-notes-medical" style="font-size: 2.5rem; color: #EF4444;"></i>
+                                </div>
+                                <h3>Zipline</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;">Drone Deliery Service</p>
+                                <p style="font-size: 0.9rem; margin-bottom: 16px;">
+                                    Emergency overnight delivery of vital medical supplies. 24/7 Hotline.
+                                </p>
+                                <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
+                                    <span class="badge badge-red">Emergency Only</span>
+                                </div>
+
+                                <!-- Requirement: Absolute Link -->
+                                <div style="margin-top: 10px; font-size: 0.85rem;">
+                                    <a href="https://www.google.com/maps" target="_blank"
+                                        style="color: var(--primary); text-decoration: none;">
+                                        View Service Map <i class="fa-solid fa-arrow-up-right-from-square"
+                                            style="font-size: 0.7em;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+
+                        <!-- Card 5 -->
+                        <td>
+                            <div class="supplier-card">
+                                <div
+                                    style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <i class="fa-solid fa-leaf" style="font-size: 2.5rem; color: #10B981;"></i>
+                                </div>
+                                <h3>Taabea Company Limited</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;">Kumasi, Ghana
+                                </p>
+                                <p style="font-size: 0.9rem; margin-bottom: 16px;">
+                                    Organic supplements and mixtures. 
+                                </p>
+                                <div style="display: flex; gap: 8px; justify-content: center; margin-bottom: 20px;">
+                                    <span class="badge badge-green">Organic</span>
+                                    <span class="badge badge-blue">New Vendor</span>
+                                </div>
+                                <a href="tel:+233243686861"><button class="btn btn-primary"
+                                    style="width: 100%; background: white; color: #333; border: 1px solid #ddd;">Contact Rep</button></a>
+                            </div>
+                        </td>
+
+                        <!-- Card 6 -->
+                        <td>
+                            <div class="supplier-card" style="border-style: dashed; background: #F8FAFC;">
+                                <div
+                                    style="height: 60px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+                                    <i class="fa-solid fa-plus-circle" style="font-size: 2.5rem; color: #94A3B8;"></i>
+                                </div>
+                                <h3>Add Supplier</h3>
+                                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;">Global
+                                    Network</p>
+                                <p style="font-size: 0.9rem; margin-bottom: 16px;">
+                                    Register a new manufacturing partner or distributor.
+                                </p>
+                                <div style="height: 24px;"></div> <!-- Spacer -->
+                                <button class="btn btn-primary" style="width: 100%;" onclick="vendor.showModal()">Add Supplier</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <footer>
+                <div class="socials" style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
+                    <a href="https://instagram.com">
+                        <img src="./images/instagram.png" alt="instagram" width="25px">
+                    </a>
+                    <a href="https://linkedin.com">
+                        <img src="./images/linkedin.png" alt="linkedin" width="25px">
+                    </a>
+                    <a href="mailto:stu@ucc.edu.gh">
+                        <img src="./images/mail.png" alt="mail" width="25px">
+                    </a> 
+                </div>         
+                <p style="margin: 0;">&copy; 2026 KHEM PHARMA</p>
+            </footer>
+        </div>
+    </main>
+
+</body>
+</html>

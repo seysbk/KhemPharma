@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khem Pharmaceutical - Reports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <img src="images/logo.png" alt="Logo">
+            <span>KHEM PHARMA</span>
+        </div>
+        <nav>
+            <a class='nav-link' href='index.html'>
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+            <a class='nav-link' href='inventory.html'>
+                <i class="fa-solid fa-boxes-stacked"></i> Master Inventory
+            </a>
+            <a class='nav-link' href='suppliers.html'>
+                <i class="fa-solid fa-truck-fast"></i> Supply Chain
+            </a>
+            <a class='nav-link active' href='report.html'>
+                <i class="fa-solid fa-file-contract"></i> Compliance
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-wrapper">
+        <div class="top-bar">
+            <h1>Incident Reporting Portal</h1>
+            <div class="user-profile">
+                <details>
+                    <summary>
+                        <div class="avatar"></div>
+                    </summary>
+                    <div>
+                        <span><b>Dr. (Mrs.) Alimati-Saadia Yussif</b></span>
+                        <span><b>Inventory Manager</b></span>
+                        <span><b>ID: <br></b><i>PG001</i></span>
+                        <span><b>Branch: <br> </b><i>Cape Coast,Ghana</i></span>
+                    </div>
+                </details>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <section>
+                <div>
+                    <!-- Left: Form -->
+                    <div>
+                        <h3 style="margin-bottom: 16px;">New Incident Report</h3>
+                        <div class="form-section">
+                            <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 0.9rem;">
+                                Submit a formal investigation request for lost, damaged, or expired stock. All reports are
+                                audit-logged.
+                            </p>
+
+                            <form action="#" method="POST" onsubmit="alert('Report Filed to Database.'); return false;">
+
+                                <div class="input-group">
+                                    <label><i class="fa-solid fa-id-badge"></i> Reporting Officer ID</label>
+                                    <input type="text" class="input-control" placeholder="e.g. U-90210" required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label><i class="fa-solid fa-barcode"></i> Affected SKU / Product Name</label>
+                                    <input type="text" class="input-control" placeholder="Search product database..."
+                                        required>
+                                </div>
+
+                                <div class="input-group">
+                                    <label><i class="fa-solid fa-layer-group"></i> Priority Level</label>
+                                    <div style="display: flex; gap: 20px; align-items: center; padding-top: 8px;">
+                                        <label
+                                            style="font-weight: 400; display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer;">
+                                            <input type="radio" name="priority" value="normal" checked>
+                                            <span>Standard (72hrs)</span>
+                                        </label>
+                                        <label
+                                            style="font-weight: 400; display: flex; align-items: center; gap: 8px; margin: 0; color: #DC2626; cursor: pointer;">
+                                            <input type="radio" name="priority" value="high">
+                                            <span>High / Critical (24hrs)</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <label><i class="fa-solid fa-clipboard-check"></i> Procedural Validation</label>
+                                    <div
+                                        style="display: flex; flex-direction: column; gap: 10px; padding-top: 8px; padding: 12px; background: #F8FAFC; border-radius: 8px;">
+                                        <label
+                                            style="font-weight: 400; display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer;">
+                                            <input type="checkbox" name="verification" required>
+                                            I have visually confirmed the physical discrepancy.
+                                        </label>
+                                        <label
+                                            style="font-weight: 400; display: flex; align-items: center; gap: 8px; margin: 0; cursor: pointer;">
+                                            <input type="checkbox" name="audit">
+                                            Flag for external regulatory audit.
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 32px; text-align: right;">
+                                    <button type="button" class="btn"
+                                        style="color: var(--text-secondary); margin-right: 12px;"
+                                        onclick="location.href='index-2.html'">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Submit Official Report</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Right: History & Visuals -->
+                    <div>
+                        <div class="card" style="text-align: center;">
+                            <h3 style="font-size: 1rem;">Evidence Preview</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.8rem; margin-bottom: 16px;">
+                                Hover to inspect the attached evidence photo for this SKU.
+                            </p>
+
+                            <div class="product-preview">
+                                <img src="images/product.png" alt="Standard">
+                                <img src="images/product_hover.png" alt="Zoom" class="hover-view">
+                            </div>
+                        </div>
+
+                        <h3 style="margin-bottom: 16px; margin-top: 32px;">Recent Filings</h3>
+                        <div class="card" style="padding: 0;">
+                            <table class="modern-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Subject</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="font-family: monospace; font-size: 0.8rem;">#R-102</td>
+                                        <td>Missing Stock (Amox.)</td>
+                                        <td><span class="badge badge-blue">Open</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-family: monospace; font-size: 0.8rem;">#R-101</td>
+                                        <td>Damaged Seal (Ibu.)</td>
+                                        <td><span class="badge badge-green">Resolved</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-family: monospace; font-size: 0.8rem;">#R-099</td>
+                                        <td>Shipment Delay</td>
+                                        <td><span class="badge badge-green">Closed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div style="padding: 12px; text-align: center;">
+                                <a href="#" style="font-size: 0.85rem; color: var(--primary); text-decoration: none;">View
+                                    All Archives</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <footer>
+                <div class="socials" style="display: flex; justify-content: center; align-items: center; gap: 1rem;">
+                    <a href="https://instagram.com">
+                        <img src="./images/instagram.png" alt="instagram" width="25px">
+                    </a>
+                    <a href="https://linkedin.com">
+                        <img src="./images/linkedin.png" alt="linkedin" width="25px">
+                    </a>
+                    <a href="mailto:stu@ucc.edu.gh">
+                        <img src="./images/mail.png" alt="mail" width="25px">
+                    </a> 
+                </div>         
+                <p style="margin: 0;">&copy; 2026 KHEM PHARMA</p>
+            </footer>
+        </div>
+    </main>
+
+</body>
+</html>
